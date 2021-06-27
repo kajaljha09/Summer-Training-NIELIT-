@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote</title>
+</head>
+<script>
+    function calculate(){
+        var age = document.myform.age.value
+        
+        if (age>=18)
+        {
+            
+            return "You are eligible to vote"
+            
+        }
+        else
+        {
+            return "You are not eligible to vote"
+        }
+       
+        
+          
+    }
+</script>
+<style>
+    body{
+        background-image:linear-gradient(orange,white,green);
+        
+        height: 100vh;
+        
+        
+    }
+    h1{
+        color: rgb(3, 80, 8);
+        margin-left:25vw;
+        font-size:6vh;
+        text-shadow: 2px 2px 3px rgb(228, 106, 7);
+    }
+    
+    form{
+        text-align: center;
+        color: white;
+
+    }
+    table{
+        
+        background-color:rgb(13, 115, 209) ;
+        border: 2px solid rgb(13, 115, 209);
+        margin-left:20vw;
+        margin-top: 100px;
+        margin-right:10vw ;
+        height: 300px;
+        width: 50vw;
+        font-size: 2em;
+        box-shadow:10px 10px 28px rgb(8, 8, 8);
+        text-shadow: 3px 3px 3px black;
+
+        
+    }
+    input{
+        width: 20rem;
+        height: 3rem;
+        font-size: 1em;
+    }
+    button{
+        height: 6vh;
+        width: fit-content;
+    }
+</style>
+</head>
+
+<body>
+<h1>
+    Check your Eligibility to Vote 
+</h1>
+<div class="container">
+
+    <form name="myform"  onsubmit="calculate()">
+        <table>
+            <tr>
+                <td>
+                    Enter your age here:
+                <td>
+                    <input type="number" name="age">
+                </td>
+            </tr>
+
+            
+            <tr>
+                <td >
+                    <button type="button" value="Calculte" width="100px" onclick="document.getElementById('val').innerHTML=calculate()">Check Eligibility</button>
+                </td>
+                <td>
+                    <button type="reset" value="Erase">Another entry</button>
+
+                </td>
+                
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div style="color:rgb(13, 13, 14) ;text-shadow: 1px 1px 1px grey;background-color: white;border:1px solid black ;font-size:3rem; height: 4rem;-sizing: border-box;">
+                        <span  id="val"></span>
+                    </div>
+
+                </td>
+            </tr>
+            
+        </table>
+
+
+    </form>
+</div>
+
+
+</body>
+
+</html>

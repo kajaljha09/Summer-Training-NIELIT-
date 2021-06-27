@@ -1,0 +1,13 @@
+.heading h1{
+    display:inline-block;
+}
+.heading img{
+    vertical-align:super;
+}
+.heading{
+    text-align: center;
+}
+ li{
+         float:left
+
+}

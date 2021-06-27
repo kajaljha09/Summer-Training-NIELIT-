@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 22</title>
+    <style>
+        body {
+            background-image: url("download.jfif");
+            background-repeat: y-repeat;
+            background-size: cover;
+
+        }
+
+        h1 {
+            color: rgb(8, 8, 8);
+            margin-left: 25vw;
+            font-size: 7vh;
+            text-shadow: 4px 4px 3px rgb(247, 247, 248);
+
+        }
+
+        form {
+            text-align: center;
+            color: white;
+
+        }
+
+        table {
+
+            color: rgb(3, 3, 97);
+            border: 2px solid black;
+            background-color: rgb(154, 203, 243);
+            margin-left: 20vw;
+            margin-top: 4vh;
+            margin-right: 10vw;
+            height: 300px;
+            width: 45vw;
+            font-size: 2em;
+            box-shadow: 10px 10px 28px rgb(8, 8, 8);
+
+
+
+        }
+
+        input {
+            width: 20rem;
+            height: 3rem;
+            font-size: 1em;
+        }
+
+        button {
+            height: 7vh;
+            color: black;
+            width: 12vw;
+            background-color: rgb(155, 155, 209);
+        }
+    </style>
+
+    <script>
+        function even() {
+            var n = parseInt(document.myform.val1.value)
+            var m = parseInt(document.myform.val2.value)
+            var evnum = "Even numbers are" + "<br>"
+            for (i = n; i <= m; i++) {
+                if (i % 2 == 0) {
+                    evnum += i + "<br>"
+
+                }
+            }
+            return evnum
+        }
+        function odd() {
+            var n = parseInt(document.myform.val1.value)
+            var m = parseInt(document.myform.val2.value)
+            var oddnum = "Odd numbers are" + "<br>"
+            for (i = n; i <= m; i++) {
+                if (i % 2 != 0) {
+                    oddnum += i + "<br>"
+
+                }
+            }
+            return oddnum
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Even Numbers And Odd Numbers</h1>
+    <div class="container">
+        <form name="myform">
+            <table>
+                <tr>
+                    <td>From</td>
+                    <td>
+                        <input name="val1">
+                    </td>
+                </tr>
+                <tr>
+                    <td>To</td>
+                    <td>
+                        <input name="val2">
+                    </td>
+                </tr>
+                <tr>
+                    <td><button type="button"
+                            onclick=" document.getElementById('result').innerHTML = even()">click to obtain even nos.</button>
+                    </td>
+                    <td>
+
+                        <div>
+                            <span id="result"></span>
+                        </div>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td><button type="button"
+                            onclick=" document.getElementById('result1').innerHTML = odd()">click to obtaine odd nos.</button>
+                    </td>
+                    <td>
+
+                        <div>
+                            <span id="result1"></span>
+                        </div>
+                    </td>
+
+                </tr>
+                
+                
+            </table>
+        </form>
+    </div>
+
+</body>
+
+</html>

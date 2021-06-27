@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marksheet</title>
+</head>
+
+<script>
+
+    function total() {
+
+
+        var phy = document.myform.phy.value
+        var chem = document.myform.chem.value
+        var bio = document.myform.bio.value
+        var math = document.myform.math.value
+        var cs = document.myform.cs.value
+        var total1 = parseInt(phy) + parseInt(chem) + parseInt(bio) + parseInt(math) + parseInt(cs)
+        return total1
+    }
+    function percentage() {
+
+        var phy = document.myform.phy.value
+        var chem = document.myform.chem.value
+        var bio = document.myform.bio.value
+        var math = document.myform.math.value
+        var cs = document.myform.cs.value
+        var perc = (parseInt(phy) + parseInt(chem) + parseInt(bio) + parseInt(math) + parseInt(cs)) / 5
+        return (perc + "%")
+    }
+    function grading() {
+
+        var phy = document.myform.phy.value
+        var chem = document.myform.chem.value
+        var bio = document.myform.bio.value
+        var math = document.myform.math.value
+        var cs = document.myform.cs.value
+
+        var perc = (parseInt(phy) + parseInt(chem) + parseInt(bio) + parseInt(math) + parseInt(cs)) / 5
+        if (perc >= 85) {
+
+            return "S"
+
+        }
+        else if (perc >= 75 && perc < 85) {
+
+            return "A"
+
+        }
+        else if (perc >= 65 && perc < 75) {
+
+            return "B"
+
+        }
+        else if (perc >= 55 && perc < 65) {
+
+            return "C"
+
+        }
+        else if (perc >= 50 && perc < 55) {
+
+            return "D"
+
+        }
+
+
+        else {
+
+
+            return "Fail"
+
+        }
+
+    }
+</script>
+<style>
+    body {
+        background-image: url("employment-background-screening-benefits.jpg");
+        background-repeat: y-repeat;
+        background-size: cover;
+
+    }
+
+    h1 {
+        color: rgb(26, 87, 219);
+        margin-left: 25vw;
+        font-size: 7vh;
+        text-shadow: 8px 8px 8px rgb(152, 180, 241);
+    }
+
+    form {
+        text-align: center;
+        color: white;
+
+    }
+
+    table {
+
+        color: rgb(3, 3, 97);
+        border: 2px solid black;
+        
+        margin-left: 20vw;
+        margin-top:4vh;
+        margin-right: 10vw;
+        height: 300px;
+        width: 50vw;
+        font-size: 2em;
+        box-shadow: 10px 10px 28px rgb(8, 8, 8);
+        
+
+
+    }
+
+    input {
+        width: 20rem;
+        height: 3rem;
+        font-size: 1em;
+    }
+
+    button {
+        height: 7vh;
+        color:black;
+        width:10vw;
+        background-color: rgb(155, 155, 209);
+    }
+</style>
+</head>
+
+<body>
+    <h1>
+        Calculate your Grades 
+    </h1>
+    <div class="container">
+
+        <form name="myform">
+            <table>
+                <tr>
+                    <td>
+                        Physics:
+                    <td>
+                        <input type="number" max=100 min=0 name="phy">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Chemistry:
+                    <td>
+                        <input type="number" name="chem">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Biology:
+                    <td>
+                        <input type="number" name="bio">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Maths:
+                    <td>
+                        <input type="number" name="math">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Computer Science:
+                    <td>
+                        <input type="number" name="cs">
+                    </td>
+                </tr>
+
+
+
+                <tr>
+                    <td>
+                        <button type="button" value="Calculte" width="100px"
+                            onclick="document.getElementById('val').innerHTML=total()">Total</button>
+                    </td>
+                    <td>
+                        <div
+                            style="color:rgb(13, 13, 14) ;text-shadow: 1px 1px 1px grey;background-color: white;border:1px solid black ;font-size:3rem; height: 4rem;-sizing: border-box;">
+                            <span id="val"></span>
+                        </div>
+
+                    </td>
+
+                </tr>
+                
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" value="Calculte" width="100px"
+                            onclick="document.getElementById('val2').innerHTML=percentage()">Percentage</button>
+                    </td>
+                    <td>
+                        <div
+                            style="color:rgb(13, 13, 14) ;text-shadow: 1px 1px 1px grey;background-color: white;border:1px solid black ;font-size:3rem; height: 4rem;-sizing: border-box;">
+                            <span id="val2"></span>
+                        </div>
+
+                    </td>
+                <tr>
+                    <td>
+                        <button type="button" value="Calculte" width="100px"
+                            onclick="document.getElementById('val3').innerHTML=grading()">Grade</button>
+                    </td>
+                    <td>
+                        <div
+                            style="color:rgb(13, 13, 14) ;text-shadow: 1px 1px 1px grey;background-color: white;border:1px solid black ;font-size:3rem; height: 4rem;-sizing: border-box;">
+                            <span id="val3"></span>
+                        </div>
+
+                    </td>
+
+                </tr>
+                </tr>
+                <tr>
+                    <td colspan="2">
+
+                        <button type="reset" value="Erase">New Entry</button>
+                    </td>
+                </tr>
+
+            </table>
+
+
+        </form>
+    </div>
+
+
+</body>
+
+</html>

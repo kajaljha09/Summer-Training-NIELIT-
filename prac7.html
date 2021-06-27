@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="w3.css">
+    <style>
+        .hd{
+            font-family:monospace;
+            text-shadow: 2px 2px 5px black;
+            margin-top: 0px;
+            text-align: center;
+            
+        }
+        p{
+            text-align: center;
+        }
+        .table{
+            margin:10px
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="heading">
+        <h1 class="hd  w3-teal">Online Job Registration Portal</h1>
+        <p>Register yourself to get new job updates</p>
+
+        <div class="table w3-responsive">
+            <form acion="login_validate.php" class="form" target="_blank" method="post">
+                <table class=" w3-table-all ">
+                    <tr>
+                        <th><label for="fname">Full Name:</label></th>
+                        <td><input autocomplete="username" type="text" id="fname" placeholder="First Name" width="100px"
+                                required>
+                            <input class="input" type="text" id="lname" placeholder="Last Name" width="100px" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="address">Addess:</label></th>
+                        <td><input class="input" id="address" maxlength="25" placeholder="Street Address" required></td>
+
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input class="input" placeholder="Street Address 2"></td>
+
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="text" placeholder="City" class="input">
+                            <input type="text" placeholder="State" class="input">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="pin" placeholder="Pin Code" class="input">
+                            <label>Country</label>
+                            <select label="Please Select" size=1 id="country">
+                                <option>India</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="phn">Phone Nunmber:</label></th>
+                        <td><input type="tel" maxlength="3" placeholder="Area Code" class="input" required>
+                            <input type="tel" maxlength="10" id="phn" placeholder="Phone number" class="input">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="mob">Mobile:</label></th>
+
+                        <td><input id="mob" type="tel" maxlength="10" placeholder="Mobile" class="input" required></td>
+                    </tr>
+                    <tr>
+                        <th><label for="email">Email Id:</label></th>
+                        <td> <input autocomplete="email" class="input" type="email" id="email"
+                                placeholder="eg-myname@gmail.com" required></td>
+                    </tr>
+                    <tr>
+                        <th><label for="interest">Areas of Interest:</label></th>
+                        <td><input type="checkbox" name="op" id="op1" class="input">&nbsp<label for="op1">Account
+                                Manager</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="checkbox" name="op" id="op2" class="input">&nbsp<label
+                                for="op2">Administrative</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="checkbox" name="op" id="op3" class="input">&nbsp<label for="op3">Human
+                                Resourses</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="checkbox" name="op" id="op4" class="input">&nbsp<label for="op4">Sales</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="checkbox" name="op" id="op5" class="input">&nbsp<label for="op5">Information
+                                Technology</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="job">Desired Nature of Job:</label></th>
+                        <td><input type="radio" name="rd" id="r1"><label for="r1">Part Time</label></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+
+                        <td><input type="radio" name="rd" id="r2"><label for="r2">Full Time</label></td>
+
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="skill">Skill Level:</label>
+                        </th>
+                        <td>
+                            <select id="skill">
+                                <option name="sk">Under Graduate</option>
+                                <option name="sk">Post Graduate</option>
+                                <option name="sk">Diploma/Tecgnical</option>
+
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="letter">Cover Letter</label></th>
+                        <td>
+                            <textarea width="400px" id="letter" maxlenth="450"
+                                placeholder="Describe yourself in brief (max 450 characters)"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <lable>Resume:</lable>
+                        </th>
+                        <td>
+                            <input value="select file" type="file">
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button class="w3-button w3-grey w3-round" type="submit">Submit</button>
+                            <button class="w3-button w3-grey w3-round" type="reset">Reset</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

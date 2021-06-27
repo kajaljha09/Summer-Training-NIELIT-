@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function table() {
+            var number = document.myForm.tab.value
+            var table="Multiplication table is here"+"<br>"
+            for (i = 1; i <= 10; i++) {
+                table+=number*i+"<br>"
+            }
+            return table
+        }
+
+    </script>
+    <style>
+        body {
+            background-image: url("abstract-flat-circles-background-vector.jpg");
+            background-repeat: y-repeat;
+            background-size: cover;
+
+        }
+
+        h1 {
+            color: rgb(247, 120, 219);
+            margin-left: 30vw;
+
+            font-size: 10vh;
+            text-shadow: 1px 1px 1px rgb(128, 6, 67);
+
+        }
+
+        form {
+            text-align: center;
+            color: rgb(131, 27, 122);
+
+        }
+
+        table {
+
+            background-color: rgb(245, 175, 196);
+            border: 2px solid rgb(245, 175, 196);
+            margin-left: 25vw;
+            margin-top: 4vh;
+            margin-right: 9vw;
+            height: 40vh;
+            width: 40vw;
+            font-size: 2em;
+            box-shadow: 10px 10px 28px rgb(8, 8, 8);
+            text-shadow: 3px 3px 3px rgb(250, 249, 249);
+
+
+        }
+
+        input {
+            width: 20rem;
+            height: 3rem;
+            font-size: 1em;
+            border: 1px solid rgb(245, 175, 196);
+        }
+
+        button {
+            height: 7vh;
+            width: fit-content;
+            font-size: 3rem;
+            color: rgb(131, 27, 122);
+            height: fit-content;
+        }
+        select{
+            width: 10vw;
+            height: 7vh;
+            
+        }
+
+    </style>
+    </style>
+</head>
+
+<body>
+    <h1>Table of a number </h1>
+    <div class="container">
+        <form name="myForm">
+
+            <table>
+                <tr>
+                    <td>
+                        Number:
+                    </td>
+                    <td>
+                        <select name="tab">
+                            <option>
+                                1
+                            </option>
+                            <option>
+                                2
+                            </option>
+                            <option>
+                                3
+                            </option>
+                            <option>
+                                4
+                            </option>
+                            <option>
+                                5
+                            </option>
+                            <option>
+                                6
+                            </option>
+                            <option>
+                                7
+                            </option>
+                            <option>
+                                8
+                            </option>
+                            <option>
+                                9
+                            </option>
+                            <option>
+                                10
+                            </option>
+                            <option>
+                                11
+                            </option>
+                            <option>
+                                12
+                            </option>
+                            <option>
+                                13
+                            </option>
+                            <option>
+                                14
+                            </option>
+                            <option>
+                                15
+                            </option>
+                            <option>
+                                16
+                            </option>
+
+                            <option>
+                                17
+                            </option>
+                            <option>
+                                18
+                            </option>
+                            <option>
+                                19
+                            </option>
+                            <option>
+                                20
+                            </option>
+
+
+                        </select>
+
+                        </option>
+                    </td>
+                </tr>
+               
+
+                    <td>
+
+                        <button type="button" onclick="document.getElementById('res').innerHTML=table()">Table</button>
+                        
+                    </td>
+
+
+                    <td>
+                        <div
+                            style="color:rgb(13, 13, 14) ;width: 36rem;text-shadow: 1px 1px 1px grey;background-color: white; border: 1px solid rgb(245, 175, 196); ;font-size:3rem; height:fit-content;-sizing: border-box;">
+                            <span id="res"></span>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+</body>
+
+</html>

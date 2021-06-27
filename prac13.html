@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 13</title>
+    <link rel="stylesheet" href="w3.css">
+    <style>
+        body {
+            background-image: url("gif.gif");
+        }
+
+        .container {
+            padding: 200px 10px;
+            width: 500px;
+        }
+
+        h1{
+            animation-name: kajal;
+            animation-duration: 3s;
+            
+            animation-iteration-count:infinite;
+            font-size:20px;
+            position: relative;
+            font-family:monospace;
+            text-shadow: rgb(15, 15, 15) 4px 4px 10px;
+            color: white;
+
+            
+
+        }
+
+        @keyframes kajal{
+            from{
+               width: 0%;
+            }
+
+            to {
+                width: 100%;;
+            }
+        }
+        .per{
+            background-color: black;
+            width:500px ;
+        }
+        .htm{
+            width:300px;
+            animation:kajal2 5s 2;
+            position: relative;
+            background-color: yellowgreen;
+        }
+        @keyframes kajal2 {
+            from{
+                width:300px ;
+            }
+            to{width:500px}
+            
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="intro">
+            <h1 class="introd">Hello Folks!!<br>
+                This is me Kajal Jha
+
+            </h1>
+        </div>
+        <br>
+        <br>
+        <br>
+       
+        
+    </div>
+    <div class="per">
+        <div class="htm">
+            HTML used:40%
+        </div>
+        <div class="cs">
+            CSS used:60%
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

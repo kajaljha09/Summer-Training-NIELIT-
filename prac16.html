@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 16</title>
+    <script>
+        function calculate(){
+            var op1 = document.myform.op1.value
+            var op2 = document.myform.op2.value
+            var oper = document.myform.oper.value
+            if (oper=="+")
+            {
+                var value=parseInt(op1) + parseInt(op2)
+                return value
+                
+            }
+            else if (oper=="-")
+            {
+                var value=parseInt(op1) - parseInt(op2)
+                return value
+                
+            }
+            else if (oper=="*")
+            {
+                var value=parseInt(op1) * parseInt(op2)
+                return value
+                
+            }
+            else if (oper=="/")
+            {
+                var value=parseInt(op1)/parseInt(op2)
+                return value
+                
+            }
+            else
+            {
+               
+                
+                return "*Invalid operator used"
+                
+            }
+              
+        }
+    </script>
+    <style>
+        body{
+            background-image: url("qO35d9.jpg");
+            background-repeat: y-repeat;
+            background-size: cover;
+            
+        }
+        h1{
+            color: white;
+            margin-left:20vw;
+            font-size:6vh;
+            text-shadow: 8px 8px 8px black;
+        }
+        
+        form{
+            text-align: center;
+            color: white;
+
+        }
+        table{
+            
+            background-color:rgb(14, 13, 13) ;
+            border: 2px solid black;
+            margin-left:20vw;
+            margin-top: 100px;
+            margin-right:10vw ;
+            height: 300px;
+            width: 50vw;
+            font-size: 2em;
+            box-shadow:10px 10px 28px rgb(8, 8, 8);
+            text-shadow: 3px 3px 3px black;
+
+            
+        }
+        input{
+            width: 20rem;
+            height: 3rem;
+            font-size: 1em;
+        }
+        button{
+            height: 6vh;
+            width: fit-content;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        Arithmetic Operations On two operands
+    </h1>
+    <div class="container">
+
+        <form name="myform"  onsubmit="calculate()">
+            <table>
+                <tr>
+                    <td>
+                        Operand 1:
+                    <td>
+                        <input type="number" name="op1">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Operand 2:
+                    <td>
+                        <input  type="number" name="op2">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Operator to be used:
+                    <td>
+                        <input name="oper">
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td >
+                        <button type="button" value="Calculte" width="100px" onclick="document.getElementById('val').innerHTML=calculate()">Calculate</button>
+                    </td>
+                    <td>
+                        <button type="reset" value="Erase">Erase</button>
+
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div style="color:rgb(13, 13, 14) ;text-shadow: 1px 1px 1px grey;background-color: white;border:1px solid black ;font-size:3rem; height: 4rem;-sizing: border-box;">
+                            <span  id="val"></span>
+                        </div>
+
+                    </td>
+                </tr>
+                
+            </table>
+
+
+        </form>
+    </div>
+
+
+</body>
+
+</html>

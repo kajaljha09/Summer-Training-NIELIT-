@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 26</title>
+    <style>
+        body{
+            background-image: url("jGlzr.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        form{
+           text-align: center;
+           
+            
+        }
+        
+        button{
+            font-size: 25px;
+            margin: 10px;
+            background-color: rgb(252, 82, 91);
+            color: white;
+            width: fit-content;
+            height: fit-content;
+        }
+        h1{
+            text-align: center;
+            color: white;
+            background-color:black;
+            width: 50vw;
+            margin-left: 25vw;
+            box-shadow: 4px 4px 6px white;
+        }
+    </style>
+    <script>
+        function num(){
+            var number=prompt("Enter any number","number here")
+            if (number%2==0 || number==0)
+            {
+                alert("Number is Even")
+            }
+            else
+            {
+                alert("Number is Odd")
+            }
+
+
+        }
+        function si(){
+            var prin=prompt("Enter principle","principle here")
+            var rate=prompt("Enter rate","rate here")
+            var time=prompt("Enter time","time here")
+            var si=(prin*rate*time)/100
+            alert("Simple Interest is "+si)
+        
+
+        }
+    </script>
+</head>
+<body>
+    <h1>Click on any of the buttons</h1>
+    <div class="container">
+        <form>
+            <button type="button" onclick="num()">Check even or odd</button>
+            <button type="button" onclick="si()">Simple Interest</button>
+        </form>
+    </div>
+    
+</body>
+</html>

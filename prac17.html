@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calculate(){
+            var length = document.myform.op1.value
+            var breadth = document.myform.op2.value
+            var value=parseInt(length)*parseInt(breadth)
+            return value
+        }
+    </script>
+    <style>
+        body{
+            background-image: url("12.jpg");
+            background-repeat: y-repeat;
+            background-size: cover;
+            
+        }
+        h1{
+            color: white;
+            margin-left:30vw;
+            font-size:6vh;
+            text-shadow: 8px 8px 8px black;
+            text-decoration: underline;
+        }
+        
+        form{
+            text-align: center;
+            color: white;
+
+        }
+        table{
+            
+            background-color:rgb(7, 2, 53) ;
+            border: 2px solid black;
+            margin-left:20vw;
+            margin-top: 100px;
+            margin-right:10vw ;
+            height: 300px;
+            width: 50vw;
+            font-size: 2em;
+            box-shadow:10px 10px 28px rgb(8, 8, 8);
+            text-shadow: 3px 3px 3px black;
+
+            
+        }
+        input{
+            width: 20rem;
+            height: 3rem;
+            font-size: 1em;
+        }
+        button{
+            height: 6vh;
+            width: fit-content;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        Area of a Rectangle
+    </h1>
+    <div class="container">
+
+        <form name="myform"  onsubmit="calculate()">
+            <table>
+                <tr>
+                    <td>
+                        Length(in cm):
+                    <td>
+                        <input type="number" name="op1" >
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Breadth(in cm):
+                    <td>
+                        <input  type="number" name="op2">
+                    </td>
+                </tr>
+
+                
+                
+                <tr>
+                    <td></td>
+                    <td >
+                        <button type="button" value="Calculte" width="100px" onclick="document.getElementById('val').innerHTML=calculate()">Calculate</button>
+                    &nbsp
+                        <button type="reset" value="Erase">Erase</button>
+
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td>Area(in cm<sup>2</sup>) =></td>
+                    <td >
+                        <div style="color:rgb(13, 13, 14) ;text-shadow: 1px 1px 1px grey;background-color: white;border:1px solid black ;font-size:3rem; height: 3rem;-sizing: border-box;">
+                            <span  id="val"></span>
+                        </div>
+
+                    </td>
+                </tr>
+                
+            </table>
+
+
+        </form>
+    </div>
+
+
+</body>
+
+</html>
