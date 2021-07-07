@@ -1,6 +1,6 @@
 # Summer Training Report
 
-## Completed training in the field of Web Designing from **National Institute of Electronics and Information Technology**
+### Completed training in the field of Web Designing from **National Institute of Electronics and Information Technology**
 ### Topics covered:
 * HTML
 * CSS
